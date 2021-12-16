@@ -48,16 +48,19 @@ def main():
             math_question = input("uh oh! you have no wishes left :( would you like to answer a math question to solve it? Enter 'y' for yes and 'n' for no: ")
             
             if math_question == 'y':
-                a = random.int(0, 20)
-                b = random.int(0, 20)
-                math_answer = int(input(a, " * ", b, " = "))
+                a = random.randint(0, 20)
+                b = random.randint(0, 20)
+                print("a =", a, ", b =", b)
+                math_answer = int(input("a * b = "))
 
                 if math_answer == a * b:
                     wish_count += 1
+                    print("Correct! Good job :) You now have 1 wish")
                     wish = input("Would you like to wish again? Input 'y' for yes, and 'n' for no: ")
                 else:
                     print("Uh oh! Your answer is incorrect. Here is your pokemon list: ")
-
-    return(user_pokemon_list)
+                    return(user_pokemon_list)
+            else:
+                return(user_pokemon_list)
 
 main()
