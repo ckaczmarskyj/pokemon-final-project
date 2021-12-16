@@ -5,16 +5,16 @@ import random
 print("Welcome to the pokemon wishing simulator! You have 3 wishes. You may choose to get more!")
 #welcome statement
 
-pokemon_list_rare: list[str] = ["Zapdos", "Zacian", "Urshifu Single-Strike"]
+pokemon_list_rare: list[str] = ["Chansey", "Tapu Fini", "Dracovish","Quagsire", "Rillaboom","Yveltal", "Dragapult", "Necrozma", "Toxapex", "Calyrex", "Galarian Darmanitan", "Lapras", "Swampert", "Urshifa Rapid-Strike Style", "Celesteela", "Regieleki", "Dragonite", "Grimmsnarl"]
 #defined list of rare pokemon
 
-pokemon_list_ultra_rare: list[str] = ["D", "E", "F"]
+pokemon_list_ultra_rare: list[str] = ["Landorus", "Cinderace", "Mimikyu", "Tyranitar", "Ditto", "Porygon2", "Ferrothorn", "Kyogre", "Hippowdon"]
 #defined list of ultra rare pokemon
 
-pokemon_list_legendary: list[str] = ["G", "H", "I"]
+pokemon_list_legendary: list[str] = ["Zapdos", "Zacian", "Urshifu Single-Strike"]
 #defined list of legendary pokemon
 
-pokemon_list_all: list[str] = ["A", "B", "C", "D", "E", "F", "G", "H", "I"]
+pokemon_list_all: list[str] = ["Chansey", "Tapu Fini", "Dracovish","Quagsire","Rillaboom","Yveltal", "Dragapult", "Necrozma", "Toxapex", "Calyrex", "Galarian Darmanitan", "Lapras", "Swampert", "Urshifa Rapid-Strike Style", "Celesteela", "Regieleki", "Dragonite", "Grimmsnarl","Landorus", "Cinderace", "Mimikyu", "Tyranitar", "Ditto", "Porygon2", "Ferrothorn", "Kyogre", "Hippowdon","Zapdos", "Zacian", "Urshifu Single-Strike" ]
 
 def main():
     #main function
