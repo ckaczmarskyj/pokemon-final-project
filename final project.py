@@ -5,7 +5,7 @@ import random
 print("Welcome to the pokemon wishing simulator! You have 3 wishes. You may choose to get more!")
 #welcome statement
 
-pokemon_list_rare: list[str] = ["A", "B", "C"]
+pokemon_list_rare: list[str] = ["Zapdos", "Zacian", "Urshifu Single-Strike"]
 #defined list of rare pokemon
 
 pokemon_list_ultra_rare: list[str] = ["D", "E", "F"]
@@ -16,14 +16,13 @@ pokemon_list_legendary: list[str] = ["G", "H", "I"]
 
 pokemon_list_all: list[str] = ["A", "B", "C", "D", "E", "F", "G", "H", "I"]
 
-user_pokemon_list: list[str] = []
-#defined list of user's pulled pokemon
-
-wish_count = 3
-
 def main():
     #main function
     wish = input("Would you like to wish? Input 'y' for yes, and 'n' for no: ")
+
+    wish_count = 3
+    user_pokemon_list: list[str] = []
+    #defined list of user's pulled pokemon
 
     while wish == 'y':
         
@@ -43,7 +42,22 @@ def main():
         wish_count -= 1
         #ISSUE: user_pokemon+list and wish_count not referenced before assignment. Figure out how to fix it.
 
-
         wish = input("Would you like to wish again? Input 'y' for yes, and 'n' for no: ")
 
+        if wish_count == 0:
+            math_question = input("uh oh! you have no wishes left :( would you like to answer a math question to solve it? Enter 'y' for yes and 'n' for no: ")
+            
+            if math_question == 'y':
+                a = random.int(0, 20)
+                b = random.int(0, 20)
+                math_answer = int(input(a, " * ", b, " = "))
+
+                if math_answer == a * b:
+                    wish_count += 1
+                    wish = input("Would you like to wish again? Input 'y' for yes, and 'n' for no: ")
+                else:
+                    print("Uh oh! Your answer is incorrect. Here is your pokemon list: ")
+
     return(user_pokemon_list)
+
+main()
