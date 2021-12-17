@@ -102,5 +102,7 @@ def main():
                 print("\nHave a nice day! Here is your pokemon list: ", user_pokemon_list)
                 break
                 #if user does not want to answer a math question, program ends, and they get their list of pokemon
-
+                
+    return(user_pokemon_list)
+    
 main()
