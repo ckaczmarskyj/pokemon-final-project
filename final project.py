@@ -24,11 +24,17 @@ def main():
     wish = input("\nWould you like to wish? Input 'y' for yes, and 'n' for no: ")
     #user input to ask if they would like to wish
 
+    continue_play = True
+    #boolean continue game
+    
+    if wish != 'y':
+        continue_play = False
+
     wish_count = 3
     user_pokemon_list: list[str] = []
     #defined current wish count and list of user's pulled pokemon
 
-    while wish == 'y':
+    while continue_play == True:
         
         pokemon_choice = random.choices(pokemon_list_all, weights=(40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 25, 25, 25, 25, 25, 25, 25, 25, 25, 20, 20, 20), k=1)
         pokemon_choice_str = pokemon_choice[0]
@@ -57,8 +63,10 @@ def main():
         #takes one wish away when user wishes
         
         wish = input("\nWould you like to wish again? Input 'y' for yes, and 'n' for no: ")
-
         if wish != 'y':
+            continue_play = False
+
+        if continue_play == False:
             print("\nHave a nice day! Here is your pokemon list: ", user_pokemon_list)
             break
             #if user does not want to continue, prints out list
